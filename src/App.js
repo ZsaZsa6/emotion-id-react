@@ -1,17 +1,12 @@
-
-// import './App.css';
 import React from 'react';
+import Games from './containers/Games'
+import { connect } from 'react-redux'
 
-
-
-function App() {
- 
-
+export default function App() {
   return (
     <div>
-      
+      <Games/>
     </div>
-  )
+  );
 }
-
-export default App;
+export default connect()(App)

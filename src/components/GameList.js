@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function GameList(props) {
+function GameList() {
    
     return(
        
@@ -9,7 +9,7 @@ function GameList(props) {
             <div>
                 <ul>
                     <li>
-                        {games.map(game => <button onClick={this.props.startGame}> `${game.username}`</button>)}
+                        {this.props.games.map(game => <button onClick={this.props.startGame}> `${game.username}`</button>)}
                     </li>
 
                 </ul>

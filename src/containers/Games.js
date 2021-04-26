@@ -1,24 +1,36 @@
 
-import GameList from '../components/Games/GameList';
-import React, { Component} from 'react';
+import GameList from '../components/GameList';
+import { connect } from 'react-redux';
+import { fetchGames } from '../actions/gameActions.js';
+import React, { Component } from 'react';
 
 class Games extends Component {
-constructor(){
-super()
+
     state = {
-        games: 'Hello'
+        games: [] 
+    }
+    componentDidMount() {
+        debugger
+        this.props.fetchGames(this.games.username)
+    }
+
+    render() {
+        return (
+            <GameList />
+        )
     }
 }
 
-fetchGames = () => {
-fetch('http://localhost:3000/games')
-.then(response => response.json())
-.then(result => {
-    this.setState({games: result})
+const mapStateToProps = (state) => {
+    return {
+        games: state.games
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+    fetchGames: () => dispatch(fetchGames())
 })
-}
-}
 
 
-
-export default Games
+export default connect(mapStateToProps, mapDispatchToProps)(Games);
