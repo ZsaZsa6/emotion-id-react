@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 
-function GameList() {
-   
-    return(
-       
-
+class GameList extends Component {
+    render() {
+    //    const {games} = this.props
+          
+                return(
             <div>
                 <ul>
                     <li>
-                        {this.props.games.map(game => <button onClick={this.props.startGame}> `${game.username}`</button>)}
+                        <h1>Does this work</h1>
                     </li>
 
                 </ul>
@@ -20,4 +20,5 @@ function GameList() {
         
     }
 
+}
 export default GameList

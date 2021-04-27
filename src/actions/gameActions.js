@@ -1,10 +1,16 @@
-const URL = 'http://localhost:8000'
+// const URL = 'http://localhost:8000'
 
 export const fetchGames = () => {
-    debugger
-    return() => {
-fetch(URL + '/games')
-.then(resp => resp.json())
-.then(data => ({ type: 'LOAD_GAMES', games: data }))
+    return(dispatch) => {
+        fetch("http://localhost:8000/games", {
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+              }
+        })
+        .then(resp => resp.json())
+        .then(data => dispatch({ type: 'LOAD_GAMES', games: data }))
+        debugger
 }
 }

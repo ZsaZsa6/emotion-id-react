@@ -1,12 +1,5 @@
-import React from 'react';
-import Games from './containers/Games'
-import { connect } from 'react-redux'
-
-export default function App() {
-  return (
-    <div>
-      <Games/>
-    </div>
-  );
+function App() {
+  return <div className="App">EMOTION ID</div>
 }
-export default connect()(App)
+
+export default App

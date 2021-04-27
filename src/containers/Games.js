@@ -11,7 +11,7 @@ class Games extends Component {
     }
     componentDidMount() {
         debugger
-        this.props.fetchGames(this.games.username)
+        this.props.fetchGames(this.props.fetchGames)
     }
 
     render() {
