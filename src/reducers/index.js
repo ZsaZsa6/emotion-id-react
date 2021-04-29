@@ -1,5 +1,3 @@
-import { combineReducers } from 'redux'
-import gameReducer from './gameReducer'
-export default combineReducers({
-    auth: (state, action) => 'testing',
-  })
+import { combineReducers } from "redux";
+import gameReducer from "./gameReducer.js";
+export default combineReducers({ games: gameReducer });
