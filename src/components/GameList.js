@@ -4,11 +4,15 @@ import React, { Component } from "react";
 
 class GameList extends Component {
   listGames = () => {
-    // debugger
     return this.props.games.map((game) => (
-      <li key={game.id}>{game.username}</li>
+      <button onClick={this.handleClick} key={game.id}>{game.username}</button>
     ));
   };
+  handleClick = (e) => {
+    e.preventDefault();
+   this.showGame()
+
+  }
   render() {
     return (
       <div>

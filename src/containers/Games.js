@@ -4,12 +4,9 @@ import { fetchGames } from "../actions/gameActions.js";
 import React, { Component } from "react";
 
 class Games extends Component {
-  // state = {
-  //   games: [],
-  // };
+ 
   componentDidMount() {
     this.props.fetchGames();
-    debugger
   }
   handleLoading = () => {
     console.log(this.props.loading);
