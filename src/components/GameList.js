@@ -1,24 +1,23 @@
 import React, { Component } from "react";
-
-
+import { Link } from 'react-router-dom'
 
 class GameList extends Component {
   listGames = () => {
     return this.props.games.map((game) => (
-      <button onClick={this.handleClick} key={game.id}>{game.username}</button>
+      <li className="" key={game.id}>
+      <Link to={`/games/${game.username}`}> {game.username} <br></br></Link>   
+      </li>     
     ));
   };
-  handleClick = (e) => {
-    e.preventDefault();
-   this.showGame()
+ 
 
-  }
   render() {
+    
     return (
       <div>
-        {this.listGames()}
-              </div>
+        <ul>{this.listGames()}</ul>
+      </div>
     );
   }
 }
-export default GameList;
+export default (GameList);

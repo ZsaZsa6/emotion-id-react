@@ -9,10 +9,11 @@ export const fetchGames = () => {
     })
   }
 }
-export const fetchGame = () => {
+
+export const fetchGame = (username) => {
   return(dispatch) => {
     dispatch({ type: "LOADING_GAME" });
-    fetch(URL + `${this.id}`).then(response =>{
+    fetch(URL + `/${username}`).then(response => {
       return response.json()
     }).then(response => {
       dispatch({ type: "LOAD_GAME", game: response})
