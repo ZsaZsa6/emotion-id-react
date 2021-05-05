@@ -5,7 +5,6 @@ import React, { Component } from "react";
 
 class Game extends Component {
   componentDidMount() {
-      console.log(this.props.game)
     if (!this.props.game) {
       this.props.fetchGame(this.props.match.params.username);
     }
