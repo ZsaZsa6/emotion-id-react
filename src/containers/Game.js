@@ -5,13 +5,14 @@ import React, { Component } from "react";
 
 class Game extends Component {
   componentDidMount() {
+    console.log(this.props.game)
     if (!this.props.game) {
       this.props.fetchGame(this.props.match.params.username);
     }
   }
   handleLoading = () => {
     console.log(this.props.loading);
-    if (this.props.loading) {
+    if (!this.props.game) {
       return <div>Loading...</div>;
     } else {
       return <GameShow game={this.props.game} />;
