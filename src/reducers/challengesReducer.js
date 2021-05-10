@@ -9,6 +9,7 @@ const challengesReducer = (state = { list: [], loading: false }, action) => {
       return {
         ...state,
         list: [...state.list, action.challenge],
+        
         loading: false,
       };
     default:

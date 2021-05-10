@@ -7,6 +7,7 @@ class Challenge extends Component {
             <div>
                 
                 <h2>{this.props.challenge.emotion_name}</h2>
+                <h3>this.props.challenge.face</h3>
                 
             </div>
         )
