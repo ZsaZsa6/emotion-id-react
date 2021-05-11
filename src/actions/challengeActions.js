@@ -5,7 +5,7 @@ export const fetchChallenge = (id) => {
         fetch(`${URL}/${id}`).then(response => {
             return response.json()
         }).then(response => {
-            dispatch({ type: "LOAD_CHALLENGE", challenge: response});
+            dispatch({ type: "LOAD_CHALLENGE", challenge: response, faces: response})
         })
     }
 }
