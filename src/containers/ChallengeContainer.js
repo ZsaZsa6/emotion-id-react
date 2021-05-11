@@ -5,14 +5,11 @@ import React, { Component } from "react";
 
 class ChallengeContainer extends Component {
   componentDidMount() {
-    console.log(this.props.challenge);
-    // debugger
     if(!this.props.challenge)
     this.props.fetchChallenge(this.props.match.params.id);
   }
 
   handleLoading = () => {
-    console.log(this.props.loading);
     if (!this.props.challenge) {
       return <div>Loading...</div>;
     } else {
@@ -24,9 +21,7 @@ class ChallengeContainer extends Component {
   }
 }
 const mapStateToProps = (state, {match}) => {
-  // debugger
-  console.log(state)
-  console.log(match.params.id)
+  
   return {
     // eslint-disable-next-line 
     challenge: state.challenges.list.find((challenge) => challenge.id == match.params.id),
