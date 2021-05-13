@@ -12,12 +12,14 @@ export const fetchChallenge = (id) => {
 export const createAnswer = (answer) => {
     return(dispatch) => {
         dispatch({ type: "SENDING_ANSWER"});
-    fetch("http://localhost:3000/challenge_answers", answer, {
+    fetch("http://localhost:3000/challenge_answers", {
         method: "POST",
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
+            
           },
+          body: "answer"
         })
          .then(response => {
              return response.json()

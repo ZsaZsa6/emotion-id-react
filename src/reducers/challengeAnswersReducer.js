@@ -9,7 +9,7 @@ const challengeAnswersReducer = (state = { challenge_answer: [], loading: false}
 case "SEND_ANSWER":
         return {
           ...state,
-          challenge_answer: [...state.challenge_answer, action.challenge_answer],
+          challenge_answer: action.challenge_answer,
           loading: false,
         }
         default:

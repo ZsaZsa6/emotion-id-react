@@ -1,15 +1,26 @@
 import React, { Component } from "react";
 
+
+
 class Challenge extends Component {
   
   handleClick = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
+    // let answer = (e.target.id, this.props.challenge.id)
+    console.log(this.props.challenge.id, e.target.id);
+    console.log(e.target.id)
+   this.props.dispatchCreateAnswer(e.target.id)
+    // (e.target.id)
+  }
     
-      }
     
-  
-  render() {
+    // let answer = () => {}
+    
+    
+    
+    render() {
+     
+      // console.log(this.props.challenge)
     return (
       <section className="bg-gray-200">
       <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto bg-gray-200 ">
