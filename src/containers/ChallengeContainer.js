@@ -1,6 +1,7 @@
 import Challenge from "../components/Challenge";
 import { connect } from "react-redux";
 import { fetchChallenge } from "../actions/challengeActions.js";
+import { createAnswer } from "../actions/challengeActions.js";
 import React, { Component } from "react";
 
 class ChallengeContainer extends Component {
@@ -20,8 +21,7 @@ class ChallengeContainer extends Component {
     return <div>{this.handleLoading()}</div>;
   }
 }
-const mapStateToProps = (state, {match}) => {
-  
+const mapStateToProps = (state, {match}) => {  
   return {
     // eslint-disable-next-line 
     challenge: state.challenges.list.find((challenge) => challenge.id == match.params.id),
@@ -30,6 +30,7 @@ const mapStateToProps = (state, {match}) => {
 };
 const mapDispatchToProps = (dispatch) => ({
   fetchChallenge: (id) => dispatch(fetchChallenge(id)),
+  dispatchCreateAnswer: (answer) => dispatch(createAnswer(answer))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChallengeContainer);

@@ -1,33 +1,54 @@
 import React, { Component } from "react";
 
 class Challenge extends Component {
+  
+  handleClick = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    
+      }
+    
+  
   render() {
     return (
-      <div className="bg-gray-200">
+      <section className="bg-gray-200">
       <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto bg-gray-200 ">
-        
-        <img
-          className="inline h-28 border-4"
+        <div>
+        <button onClick={this.handleClick} >
+        <img id={this.props.challenge.faces[0].id}
+          className="inline h-33 border-4"
           src={this.props.challenge.faces[0].image_url}
-          alt={this.props.challenge.faces[0].face_id}
+          alt=""
+          />
+          </button>
+          </div>
           
-        />
-        <img
-          className="inline h-28 border-4"
+        
+        <div>
+        <button onClick={this.handleClick} >
+        <img id={this.props.challenge.faces[1].id}
+          className="inline h-33 border-4"
           src={this.props.challenge.faces[1].image_url}
           alt=""
         />
-        <img
-          className="inline h-28 border-4 "
+        </button>
+        </div>
+
+        <div>
+          <button onClick={this.handleClick} >
+        <img id={this.props.challenge.faces[2].id}
+          className="inline h-33 border-4"
           src={this.props.challenge.faces[2].image_url}
           alt=""
-        />
+          />
+        </button>
+        </div>
         </div>
         
-        <div className="container mx-auto bg-yellow-300 box-content h-32 w-32 p-4 border-10">          
+        <div className="container mx-auto bg-yellow-300 box-content h-33 w-32 p-4 border-10">          
           <p className="text-center">{this.props.challenge.emotion_name}</p>
           </div>
-          </div>
+        </section>
       
     
     
