@@ -17,7 +17,7 @@ class GameShow extends Component {
         <br></br>
         <br></br>
         <p className="text-center">
-        <Link className="hover:underline text-2xl text-blue-700 font-bold" to={`/challenges/${this.props.game.current_challenge_id}`}> Begin challenge </Link>
+        <Link className="hover:underline text-2xl text-blue-700 font-bold" to={`${this.props.game.username}/challenges/${this.props.game.current_challenge_id}`}> Begin challenge </Link>
         </p>
       </div>
 

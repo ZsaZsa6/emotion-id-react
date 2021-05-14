@@ -3,18 +3,15 @@ import React, { Component } from "react";
 
 
 class Challenge extends Component {
-  
+  // answer = (this.props.challenge.id, this.props.game.id)
   handleClick = (e) => {
     e.preventDefault();
-    // let answer = (e.target.id, this.props.challenge.id)
-    console.log(this.props.challenge.id, e.target.id);
-    console.log(e.target.id)
-   this.props.dispatchCreateAnswer(e.target.id)
+    console.log(this.props.challenge.id, e.target.id);  
+   this.props.dispatchCreateAnswer({challenge_id: this.props.challenge.id, face_id: e.target.id}, this.game_)
     // (e.target.id)
   }
     
     
-    // let answer = () => {}
     
     
     

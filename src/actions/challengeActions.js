@@ -9,17 +9,18 @@ export const fetchChallenge = (id) => {
         })
     }
 }
-export const createAnswer = (answer) => {
+export const createAnswer = (answer, game_username) => {
     return(dispatch) => {
         dispatch({ type: "SENDING_ANSWER"});
-    fetch("http://localhost:3000/challenge_answers", {
+    fetch(`http://localhost:3000/games/${game_username}/challenge_answers`,
+    {
         method: "POST",
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
             
           },
-          body: "answer"
+          body: JSON.stringify({challenge_answer: answer})
         })
          .then(response => {
              return response.json()
