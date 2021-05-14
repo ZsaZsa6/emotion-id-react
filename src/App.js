@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Games from "./containers/Games";
 import Game from "./containers/Game";
 import ChallengeContainer from "./containers/ChallengeContainer";
-// import AnswerContainer from "./containers/AnswerContainer";
 function App() {
   return (
     <div className="App">
@@ -12,8 +11,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Games} />
           <Route exact path="/games/:username" component={Game} />
-          <Route exact path="/games/:username/challenges/:id" component={ChallengeContainer} />
-          <Route exact path="/games/:username/challenges/:id/challenge_answers" component={ChallengeContainer} />
+          <Route exact path="/challenges/:id" component={ChallengeContainer} />
         </Switch>
       </Router>
     </div>

@@ -1,4 +1,4 @@
-const challengesReducer = (state = { list: [], faces: [], loading: false }, action) => {
+const challengesReducer = (state = { list: [], loading: false }, action) => {
   switch (action.type) {
     case "LOADING_CHALLENGE":
       return {
@@ -8,11 +8,9 @@ const challengesReducer = (state = { list: [], faces: [], loading: false }, acti
     case "LOAD_CHALLENGE":
       return {
         ...state,
-        list: [...state.list, state.faces, action.challenge],
-
+        list: [...state.list, action.challenge],
         loading: false,
       };
-      
     default:
       return state;
   }
