@@ -1,7 +1,8 @@
 import React, {Component} from 'react';  
 import {connect} from 'react-redux';
 
-class FlashMessage extends Component{
+class FlashMessageContainer extends Component{
+  
 
   render(){
     const {message, className} = this.props.flashMessage;
@@ -25,4 +26,4 @@ const mapStateToProps = ({flashMessage}) => {
   return {flashMessage};
 };
 
-export default connect(mapStateToProps)(FlashMessage); 
+export default connect(mapStateToProps)(FlashMessageContainer); 

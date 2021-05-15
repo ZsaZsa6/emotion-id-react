@@ -20,9 +20,9 @@ class GameList extends Component {
     
     return (
       <div>
-        <p className="text-center text-xl text-red-700"> Please select your username to view your game
-      </p>
-        <ul>{this.listGames()}</ul>
+        <p className="text-center text-xl text-red-700"> Please select your username to view your game</p>
+        <ul>
+          {this.listGames()}</ul>
       </div>
     );
   }
