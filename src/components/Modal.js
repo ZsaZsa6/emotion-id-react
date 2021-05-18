@@ -9,18 +9,10 @@ export default function Modal() {
   const [showModal, setShowModal] = React.useState(false);
 
   return (
-    <>
-      <Button
-        color="lightBlue"
-        type="button"
-        onClick={(e) => setShowModalCode(true)}
-        ripple="light"
-      >
-        Open small Modal
-      </Button>
+    <>     
 
       <Modal size="sm" active={showModal} toggler={() => setShowModal(false)}>
-        <ModalHeader toggler={() => setShowModal(false)}>
+        <ModalHeader toggler={() => setShowModal(true)}>
           Modal Title
         </ModalHeader>
         <ModalBody className="{this.props.correctMessage}">

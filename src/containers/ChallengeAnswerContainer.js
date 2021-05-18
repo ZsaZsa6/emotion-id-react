@@ -15,11 +15,11 @@ class ChallengeAnswerContainer extends Component {
       console.log(this.props.challengeAnswer);
     }
     if ((this.props.challengeAnswer.correct = true)) {
-      return <Modal challengeAnswer={this.props.challengeAnswer} />;
+      return <Modal modal={this.props.challengeAnswer.correct} />;
     }
 
     if ((this.props.challengeAnswer.correct = false)) {
-      return <Alert challengeAnswer={this.props.challengeAnswer} />;
+      return <Alert alert={this.props.challengeAnswer.correct} />;
     }
   };
 
