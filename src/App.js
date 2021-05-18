@@ -3,6 +3,7 @@ import Games from "./containers/Games";
 import Game from "./containers/Game";
 import ChallengeContainer from "./containers/ChallengeContainer";
 import ChallengeAnswerContainer from "./containers/ChallengeAnswerContainer";
+import "@material-tailwind/react/tailwind.css";
 // import Alert from "./components/Alert"
 
 
@@ -18,7 +19,7 @@ function App() {
           <Route exact path="/games/:username" component={Game} />
           <Route exact path="/games/:username/challenges/:id" component={ChallengeContainer} />
           <Route exact path="/games/:username/challenges/:id/challenge_answers" component={ChallengeContainer} />
-          <Route exact path="/games/:username/challenges/:id/challenge_answers" component={ChallengeAnswerContainer} />
+          <Route exact path="/games/:username/challenges/:id/challenge_answers/modal" component={ChallengeAnswerContainer} />
         </Switch>
       </Router>
     </div>

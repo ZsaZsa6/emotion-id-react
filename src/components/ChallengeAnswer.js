@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from "./Modal"
 
 class ChallengeAnswer extends Component {
     correctMessage = () => {
@@ -9,14 +10,13 @@ class ChallengeAnswer extends Component {
          return(this.props.challengeAnswer.message = "Keep trying")
      }
  
-    // (props.cochallengeAnswer.message)
     render() {
         return(
-            <div className ="bg-red-200">
-                if{this.challengeAnswer.correct}
-                {this.correctMessage()}
+            <div>
+             <Modal={this.props.correctMessage}/>
             </div>
     )}
 }
 
 export default ChallengeAnswer;
+

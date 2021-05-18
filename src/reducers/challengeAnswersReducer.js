@@ -16,7 +16,6 @@ const challengeAnswersReducer = (
       return {
         ...state,
         challenge_answer: action.challenge_answer,
-        message: action.message,
         loading: false,
         // ?create alert timeout redirect?
       };
