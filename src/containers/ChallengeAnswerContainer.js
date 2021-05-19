@@ -14,7 +14,6 @@ class ChallengeAnswerContainer extends Component {
     if (!this.props.challengeAnswer) {
       return <div>Loading...</div>;
     } else {
-      console.log(this.props.challengeAnswer);
       return (
       <ChallengeAnswer challenge_answer={this.props.challengeAnswer} />);
     }
