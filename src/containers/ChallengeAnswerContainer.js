@@ -1,5 +1,6 @@
-import Modal from "../components/Modal";
-import Alert from "../components/Alert";
+// import Modal from "../components/Modal";
+// import Alert from "../components/Alert";
+import ChallengeAnswer from "../components/ChallengeAnswer";
 import { connect } from "react-redux";
 // import { createAnswer } from "../actions/challengeActions"
 import React, { Component } from "react";
@@ -11,15 +12,11 @@ class ChallengeAnswerContainer extends Component {
   // }
   handleLoading = () => {
     if (!this.props.challengeAnswer) {
-      <div>Loading...</div>;
+      return <div>Loading...</div>;
+    } else {
       console.log(this.props.challengeAnswer);
-    }
-    if ((this.props.challengeAnswer.correct = true)) {
-      return <Modal modal={this.props.challengeAnswer.correct} />;
-    }
-
-    if ((this.props.challengeAnswer.correct = false)) {
-      return <Alert alert={this.props.challengeAnswer.correct} />;
+      return (
+      <ChallengeAnswer challenge_answer={this.props.challengeAnswer} />);
     }
   };
 
@@ -29,9 +26,9 @@ class ChallengeAnswerContainer extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    challengeAnswer: state.challengeAnswer,
+    // loading: state.challengeAnswer.loading,
+    challengeAnswer: state.challenge_answer.challenge_answer,
     message: state.message,
-    loading: state.challengeAnswer.loading,
   };
 };
 // const mapDispatchToProps = (dispatch, {match}) =>({

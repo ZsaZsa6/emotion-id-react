@@ -14,6 +14,12 @@ class Challenge extends Component {
     
     return (
       <section className="bg-gray-200">
+      <div>   
+           <figure className="container flex box-center mx-auto bg-blue-200 rounded-xl p-8 md:p-0 text-center">   
+          <p className="container font-bold mx-15 text-center text-green-dark py-2 px-4">Pick the picture that matches the emotion:
+           <br></br><text className="text-center font-bold text xl-bold">{this.props.challenge.emotion_name}</text></p>
+          </figure>
+          </div>
       <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto bg-gray-200 ">
         <div>
         <button onClick={this.handleClick} >
@@ -47,10 +53,11 @@ class Challenge extends Component {
         </button>
         </div>
         </div>
+        {/* <section className="container mx-auto bg-yellow-300 box-content h-33 w-32 p-4 border-10">  */}
+          
         
-        <div className="container mx-auto bg-yellow-300 box-content h-33 w-32 p-4 border-10">          
-          <p className="text-center">{this.props.challenge.emotion_name}</p>
-          </div>
+          
+          {/* </section> */}
         </section>
       
     

@@ -1,22 +1,16 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 // // import Modal from "./Modal"
 
-// class ChallengeAnswer extends Component {
-//     correctMessage = () => {
-//         console.log(this.props.challengeAnswer.correct)
-//   return(this.props.challengeAnswer.message = "You did great")}
+class ChallengeAnswer extends Component {
 
-//      incorrectMessage = () => {
-//          return(this.props.challengeAnswer.message = "Keep trying")
-//      }
  
-//     render() {
-//         return(
-//             <div>
-//              <Modal={this.props.correctMessage}/>
-//             </div>
-//     )}
-// }
+    render() {
+        return(
+            <div>
+            {this.props.challenge_answer.correct ? "You did Great!" : "Better luck next time"}
+            </div>
+    )}
+}
 
-// export default ChallengeAnswer;
+export default ChallengeAnswer;
 

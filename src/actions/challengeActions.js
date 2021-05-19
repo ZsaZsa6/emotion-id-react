@@ -30,3 +30,11 @@ export const createAnswer = (answer, game_username) => {
     }
 
 }
+// export const showAnswer = (id, game_username) => {
+//     return(dispatch) => {
+//         fetch(`http://localhost:3000/games/${game_username}/challenge_answers/${id}`).then(response => {return response.json()
+//     }).then(response => {
+//         dispatch({ type: "SHOW_ANSWER", challenge_answer: response})
+//     })
+//     }
+// }

@@ -2,6 +2,7 @@ import Challenge from "../components/Challenge";
 import { connect } from "react-redux";
 import { fetchChallenge } from "../actions/challengeActions.js";
 import { createAnswer } from "../actions/challengeActions.js";
+import ChallengeAnswerContainer from "./ChallengeAnswerContainer"
 import React, { Component } from "react";
 
 
@@ -25,10 +26,10 @@ class ChallengeContainer extends Component {
 
   
   render() {
-    return (<div>{this.handleLoading()}
-     
-     </div>)
     
+    return (<div>{this.handleLoading()}
+            <ChallengeAnswerContainer/>
+           </div>)
   }
 }
 const mapStateToProps = (state, {match}) => {  
