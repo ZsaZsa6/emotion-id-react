@@ -2,6 +2,7 @@
 // import Alert from "../components/Alert";
 import ChallengeAnswer from "../components/ChallengeAnswer";
 import { connect } from "react-redux";
+import { withRouter } from 'react-router';
 // import { createAnswer } from "../actions/challengeActions"
 import React, { Component } from "react";
 
@@ -27,11 +28,11 @@ const mapStateToProps = (state) => {
   return {
     // loading: state.challengeAnswer.loading,
     challengeAnswer: state.challenge_answer.challenge_answer,
-    message: state.message,
+    
   };
 };
 // const mapDispatchToProps = (dispatch, {match}) =>({
 //   dispatchCreateAnswer: (answer) => dispatch(createAnswer(answer, match.params.usernam))
 
 // })
-export default connect(mapStateToProps)(ChallengeAnswerContainer);
+export default withRouter(connect(mapStateToProps)(ChallengeAnswerContainer));

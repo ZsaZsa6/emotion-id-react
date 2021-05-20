@@ -53,11 +53,6 @@ class Challenge extends Component {
         </button>
         </div>
         </div>
-        {/* <section className="container mx-auto bg-yellow-300 box-content h-33 w-32 p-4 border-10">  */}
-          
-        
-          
-          {/* </section> */}
         </section>
       
     

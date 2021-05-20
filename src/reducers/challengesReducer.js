@@ -12,7 +12,7 @@ const challengesReducer = (state = { list: [], faces: [], loading: false }, acti
 
         loading: false,
       };
-
+     
             
     default:
       return state;

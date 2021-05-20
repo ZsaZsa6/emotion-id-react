@@ -29,6 +29,7 @@ export const createAnswer = (answer, game_username) => {
                 console.log(challenge_answer)
         dispatch({ type: "SEND_ANSWER", challenge_answer, game})
         dispatch({ type: "UPDATE_CHALLENGE", game })
+        window.location.assign(`/games/${game_username}/challenges/${game.current_challenge_id}`)
         })
     }
 
