@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+// import PropTypes from "prop-types";
+import { withRouter } from "react-router";
 class ChallengeAnswer extends Component {
 
  
@@ -14,5 +15,8 @@ class ChallengeAnswer extends Component {
     )}  
 }
 
-export default ChallengeAnswer;
+// withRouter redirect after timeout to game.username.current_challenge_id refer to router props:history
+// const ChallengeAnswerWithRouter = withRouter(ChallengeAnswer)
+
+export default withRouter(ChallengeAnswer);
 

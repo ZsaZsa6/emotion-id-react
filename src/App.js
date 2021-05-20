@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-// import {  topHeader } from "./components/TopHeader";
 import Games from "./containers/Games";
 import Game from "./containers/Game";
 import ChallengeContainer from "./containers/ChallengeContainer";

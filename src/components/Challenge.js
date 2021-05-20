@@ -15,9 +15,9 @@ class Challenge extends Component {
     return (
       <section className="bg-gray-200">
       <div>   
-           <figure className="container flex box-center mx-auto bg-blue-200 rounded-xl p-8 md:p-0 text-center">   
+           <figure className="container flex box-center mx-auto bg-blue-200 rounded-xl p-8 md:p-0 items-center">   
           <p className="container font-bold mx-15 text-center text-green-dark py-2 px-4">Pick the picture that matches the emotion:
-           <br></br><text className="text-center font-bold text xl-bold">{this.props.challenge.emotion_name}</text></p>
+           <br></br><p className="text-center w-48 mx-auto font-bold text xl-bold ">{this.props.challenge.emotion_name}</p></p>
           </figure>
           </div>
       <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto bg-gray-200 ">

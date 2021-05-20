@@ -24,17 +24,12 @@ export const createAnswer = (answer, game_username) => {
         })
          .then(response => {
              return response.json()
-            }).then(response => {   
-        dispatch({ type: "SEND_ANSWER", challenge_answer: response})
+            }).then(({game, ...challenge_answer}) => {   
+                console.log(game)
+                console.log(challenge_answer)
+        dispatch({ type: "SEND_ANSWER", challenge_answer, game})
+        dispatch({ type: "UPDATE_CHALLENGE", game })
         })
     }
 
 }
-// export const showAnswer = (id, game_username) => {
-//     return(dispatch) => {
-//         fetch(`http://localhost:3000/games/${game_username}/challenge_answers/${id}`).then(response => {return response.json()
-//     }).then(response => {
-//         dispatch({ type: "SHOW_ANSWER", challenge_answer: response})
-//     })
-//     }
-// }
