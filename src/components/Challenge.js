@@ -1,62 +1,63 @@
 import React, { Component } from "react";
 
-
-
 class Challenge extends Component {
   handleClick = (e) => {
     e.preventDefault();
-   this.props.dispatchCreateAnswer({challenge_id: this.props.challenge.id, face_id: e.target.id}, this.game_username)
-  }
-  
-    
-  
+    this.props.dispatchCreateAnswer(
+      { challenge_id: this.props.challenge.id, face_id: e.target.id },
+      this.game_username
+    );
+  };
+
   render() {
-    
     return (
-      <section className="bg-gray-200">
-      <div>   
-           <figure className="container flex box-center mx-auto bg-blue-200 rounded-xl p-8 md:p-0 items-center">   
-          <p className="container font-bold mx-15 text-center text-green-dark py-2 px-4">Pick the picture that matches the emotion:
-           <br></br><p className="text-center w-48 mx-auto font-bold text xl-bold ">{this.props.challenge.emotion_name}</p></p>
-          </figure>
-          </div>
-      <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto bg-gray-200 ">
-        <div>
-        <button onClick={this.handleClick} >
-          
-        <img id={this.props.challenge.faces[0].id}
-          className="inline h-33 border-4"
-          src={this.props.challenge.faces[0].image_url}
-          alt=""
-          />
-          </button>
-          </div>
-          
+      <section className="font-bold mx-15 text-center text-green-dark py-2 px-4">
+        <div className="container flex justify-center mx-auto bg-blue-200 p-8 md:p-0 items-center">
+          <figure className="box-center mx-auto">
+            Pick the picture that matches the emotion:
         
-        <div>
-        <button onClick={this.handleClick} >
-        <img id={this.props.challenge.faces[1].id}
-          className="inline h-33 border-4"
-          src={this.props.challenge.faces[1].image_url}
-          alt=""
-        />
-        </button>
+          <br></br>
+           {/* className="box-center font" key="challenge.emotion_name"> */}
+           
+          </figure>
         </div>
 
-        <div>
-          <button onClick={this.handleClick} >
-        <img id={this.props.challenge.faces[2].id}
-          className="inline h-33 border-4"
-          src={this.props.challenge.faces[2].image_url}
-          alt=""
-          />
-        </button>
+        <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto">
+          <div>
+            <button onClick={this.handleClick}>
+              <img
+                id={this.props.challenge.faces[0].id}
+                className="object-cover sm:h-56 w-full"
+                src={this.props.challenge.faces[0].image_url}
+                alt=""
+              />
+            </button>
+          </div>
+
+          <div>
+            <button onClick={this.handleClick}>
+              <img
+                id={this.props.challenge.faces[1].id}
+                className="object-cover sm:h-56 w-full"
+                src={this.props.challenge.faces[1].image_url}
+                alt=""
+              />
+            </button>
+          </div>
+
+          <div>
+            <button onClick={this.handleClick}>
+              <img
+                id={this.props.challenge.faces[2].id}
+                className="object-cover sm:h-56 w-full"
+                src={this.props.challenge.faces[2].image_url}
+                alt=""
+              />
+            </button>
+          </div>
         </div>
-        </div>
-        </section>
-      
-    
-    
+          <figure className="bg-red-300 box font-bold text-2xl ">{this.props.challenge.emotion_name}</figure>
+      </section>
     );
   }
 }

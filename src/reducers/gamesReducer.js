@@ -27,7 +27,8 @@ const gamesReducer = (state = { games: [], loading: false }, action) => {
       case "UPDATE_CHALLENGE":
         return {
           ...state, 
-          games: [...state.games, action.game]
+          games: [...state.games, action.game],
+          
         }
       
       default:

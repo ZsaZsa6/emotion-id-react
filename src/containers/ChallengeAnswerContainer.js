@@ -1,22 +1,17 @@
-// import Modal from "../components/Modal";
-// import Alert from "../components/Alert";
 import ChallengeAnswer from "../components/ChallengeAnswer";
 import { connect } from "react-redux";
 import { withRouter } from 'react-router';
-// import { createAnswer } from "../actions/challengeActions"
 import React, { Component } from "react";
 
 class ChallengeAnswerContainer extends Component {
-  // componentDidMount() {
-  //   if(!this.props.challengeAnswer)
-  //   this.props.dispatchCreateAnswer(this.props.match.params.id)
-  // }
+ 
   handleLoading = () => {
-    if (!this.props.challengeAnswer) {
-      return <div>Loading...</div>;
+    if (!this.props.challengeAnswer.face_id) {
+      return <div></div>;
     } else {
       return (
-      <ChallengeAnswer challenge_answer={this.props.challengeAnswer} />);
+      <ChallengeAnswer challenge_answer={this.props.challengeAnswer}
+       />);
     }
   };
 
@@ -26,13 +21,8 @@ class ChallengeAnswerContainer extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    // loading: state.challengeAnswer.loading,
     challengeAnswer: state.challenge_answer.challenge_answer,
-    
-  };
+    };
 };
-// const mapDispatchToProps = (dispatch, {match}) =>({
-//   dispatchCreateAnswer: (answer) => dispatch(createAnswer(answer, match.params.usernam))
 
-// })
 export default withRouter(connect(mapStateToProps)(ChallengeAnswerContainer));
