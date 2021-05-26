@@ -1,5 +1,5 @@
 const challengeAnswersReducer = (
-  state = { challenge_answer: {}, loading: false},
+  state = { challenge_answer: {}, loading: false },
   action
 ) => {
   switch (action.type) {
@@ -7,9 +7,7 @@ const challengeAnswersReducer = (
       return {
         ...state,
         loading: true,
-    
       };
-
 
     case "SEND_ANSWER":
       return {
@@ -22,6 +20,5 @@ const challengeAnswersReducer = (
       return state;
   }
 };
-export default challengeAnswersReducer;
 
-// Clear out message, reducer case for UPDATE CHALLENGE resets challenge to empty
+export default challengeAnswersReducer;

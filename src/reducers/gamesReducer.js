@@ -12,7 +12,7 @@ const gamesReducer = (state = { games: [], loading: false }, action) => {
         games: action.games,
         loading: false,
       };
-   
+
     case "LOADING_GAME":
       return {
         ...state,
@@ -21,17 +21,22 @@ const gamesReducer = (state = { games: [], loading: false }, action) => {
     case "LOAD_GAME":
       return {
         ...state,
-        games:[...state.games, action.game],
+        games: [...state.games, action.game],
         loading: false,
       };
-      case "UPDATE_CHALLENGE":
-        return {
-          ...state, 
-          games: [...state.games, action.game],
-          
-        }
-      
-      default:
+    case "UPDATE_CHALLENGE":
+      return {
+        ...state,
+        games: [...state.games, action.game],
+      };
+    case "DISPLAY_LEVEL_PAGE":
+      return {
+        ...state,
+        games: [...state.games, action.game],
+        loading: false,
+      };
+
+    default:
       return state;
   }
 };

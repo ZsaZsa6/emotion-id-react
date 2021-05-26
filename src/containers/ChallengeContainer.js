@@ -36,7 +36,7 @@ const mapStateToProps = (state, {match}) => {
   return {
     // eslint-disable-next-line 
     challenge: state.challenges.list.find((challenge) => challenge.id == match.params.id),
-    // game pass to the challenge answer container
+    
     loading: state.challenges.loading,
   };
 };
