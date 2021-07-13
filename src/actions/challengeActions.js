@@ -16,7 +16,6 @@ export const fetchChallenge = (id) => {
   };
 };
 export const createAnswer = (answer, game_username) => {
-  console.log("b");
   return (dispatch) => {
     console.log("c");
     dispatch({ type: "SENDING_ANSWER" });
@@ -32,20 +31,15 @@ export const createAnswer = (answer, game_username) => {
         return response.json();
       })
       .then(({ game, ...challenge_answer }) => {
-        //console.log(game);
-        //console.log(challenge_answer);
-        console.log("d");
-        dispatch({ type: "SEND_ANSWER", challenge_answer, game });
-      
+        dispatch({ type: "SEND_ANSWER", challenge_answer, game });      
         dispatch({ type: "UPDATE_CHALLENGE", game });
-        
-        
+              
         
         if (game.current_challenge_id >= 5) {
           dispatch({ type: "DISPLAY_LEVEL_PAGE", game });
           return `/games/${game_username}`
         }
-          
+          else
           return `/games/${game_username}/challenges/${game.current_challenge_id}`
       })
     

@@ -3,11 +3,9 @@ import React, { Component } from "react";
 class Challenge extends Component {
   handleClick = (e) => {
     e.preventDefault();
-    console.log("a");
-    this.props
-      .dispatchCreateAnswer({
+    this.props.dispatchCreateAnswer({
         challenge_id: this.props.challenge.id,
-        face_id: e.target.id,
+        face_id: e.target.id
       })
 
       .then((URL) => {
