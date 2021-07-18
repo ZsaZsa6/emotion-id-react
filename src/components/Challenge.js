@@ -8,10 +8,8 @@ class Challenge extends Component {
         face_id: e.target.id
       },
       this.game_username
-      )
-      .then((URL) => {
-        this.props.history.push(URL);
-      });
+     
+      );
   };
 
   render() {
