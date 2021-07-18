@@ -18,7 +18,6 @@ export const createAnswer = (answer, game_username) => {
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
-            
           },
           body: JSON.stringify({challenge_answer: answer})
         })
@@ -35,7 +34,6 @@ export const createAnswer = (answer, game_username) => {
        
        dispatch({ type: 'DISPLAY_LEVEL_PAGE', game })
         window.location.assign(`/games/${game_username}`)
-       
        }
         })
     }

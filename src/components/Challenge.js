@@ -17,8 +17,6 @@ class Challenge extends Component {
             Pick the picture that matches the emotion:
         
           <br></br>
-           {/* className="box-center font" key="challenge.emotion_name"> */}
-           
           </figure>
         </div>
 
