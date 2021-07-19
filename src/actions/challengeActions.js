@@ -1,14 +1,20 @@
-let URL = "http://localhost:3000/challenges"
+let URL = "http://localhost:3000/challenges";
 export const fetchChallenge = (id) => {
-    return (dispatch) => {
-        dispatch({ type: "LOADING_CHALLENGE" });
-        fetch(`${URL}/${id}`).then(response => {
-            return response.json()
-        }).then(response => {
-            dispatch({ type: "LOAD_CHALLENGE", challenge: response, faces: response})
-        })
-    }
-}
+  return (dispatch) => {
+    dispatch({ type: "LOADING_CHALLENGE" });
+    fetch(`${URL}/${id}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        dispatch({
+          type: "LOAD_CHALLENGE",
+          challenge: response,
+          faces: response,
+        });
+      });
+  };
+};
 export const createAnswer = (answer, game_username) => {
     return(dispatch) => {
         dispatch({ type: "SENDING_ANSWER"});
@@ -39,3 +45,4 @@ export const createAnswer = (answer, game_username) => {
     }
 
 }
+
