@@ -18,7 +18,7 @@ class Challenge extends Component {
         <div className="container flex justify-center mx-auto bg-blue-200 p-8 md:p-0 items-center">
           <figure className="box-center mx-auto">
             Pick the picture that matches the emotion:
-            <br></br>
+
           </figure>
         </div>
 
