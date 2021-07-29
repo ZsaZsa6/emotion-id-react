@@ -37,7 +37,7 @@ class GameList extends Component {
           placeholder="Start typing your username"
         />
         <p className="bg-gray-300 text-center text-xl text-red-700">
-          Please select your username to view your game or 
+          Please select your username to view your game or search for your username
 
         </p>
         <input onChange={this.handleChange} type="text" placeholder="Search for your username" />

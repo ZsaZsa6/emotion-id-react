@@ -3,9 +3,10 @@ import React, { Component } from "react";
 class Challenge extends Component {
   handleClick = (e) => {
     e.preventDefault();
-    this.props.dispatchCreateAnswer({
+    this.props
+      .dispatchCreateAnswer({
         challenge_id: this.props.challenge.id,
-        face_id: e.target.id
+        face_id: e.target.id,
       })
 
       .then((URL) => {
@@ -20,7 +21,6 @@ class Challenge extends Component {
           <figure className="box-center mx-auto">
             Pick the picture that matches the emotion:
             <br></br>
-
           </figure>
         </div>
 
