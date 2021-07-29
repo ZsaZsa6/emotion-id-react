@@ -17,7 +17,6 @@ export const fetchChallenge = (id) => {
 };
 export const createAnswer = (answer, game_username) => {
   return (dispatch) => {
-    console.log("c");
     dispatch({ type: "SENDING_ANSWER" });
     fetch(`http://localhost:3000/games/${game_username}/challenge_answers`, {
       method: "POST",
@@ -37,7 +36,7 @@ export const createAnswer = (answer, game_username) => {
         
         if (game.current_challenge_id >= 5) {
           dispatch({ type: "DISPLAY_LEVEL_PAGE", game });
-          return `/games/${game_username}`
+          return `/games/${game_username}`;
         }
           else
           return `/games/${game_username}/challenges/${game.current_challenge_id}`

@@ -26,4 +26,5 @@ class GameShow extends Component {
     );
   }
 }
+
 export default GameShow;

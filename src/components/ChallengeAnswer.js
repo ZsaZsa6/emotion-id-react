@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
 class ChallengeAnswer extends Component {
-  //
-
   render() {
     return (
       <div>

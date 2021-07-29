@@ -31,7 +31,11 @@ class GameList extends Component {
   render() {
     return (
       <div>
-
+        <input
+          onChange={this.handleChange}
+          type="text"
+          placeholder="Start typing your username"
+        />
         <p className="bg-gray-300 text-center text-xl text-red-700">
           Please select your username to view your game or 
 
@@ -42,4 +46,5 @@ class GameList extends Component {
     );
   }
 }
+
 export default GameList;

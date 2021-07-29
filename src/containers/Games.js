@@ -4,12 +4,10 @@ import { fetchGames } from "../actions/gameActions.js";
 import React, { Component } from "react";
 
 class Games extends Component {
- 
   componentDidMount() {
     this.props.fetchGames();
   }
   handleLoading = () => {
-    console.log(this.props.loading);
     if (this.props.loading) {
       return <div>Loading...</div>;
     } else {
@@ -18,11 +16,7 @@ class Games extends Component {
   };
 
   render() {
-    return (
-      <div>
-        {this.handleLoading()}
-      </div>
-    );
+    return <div>{this.handleLoading()}</div>;
   }
 }
 
