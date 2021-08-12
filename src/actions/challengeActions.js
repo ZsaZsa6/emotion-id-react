@@ -30,16 +30,17 @@ export const createAnswer = (answer, game_username) => {
         return response.json();
       })
       .then(({ game, ...challenge_answer }) => {
-        dispatch({ type: "SEND_ANSWER", challenge_answer, game });
-
+        dispatch({ type: "SEND_ANSWER", challenge_answer, game });      
         dispatch({ type: "UPDATE_CHALLENGE", game });
-
+              
+        
         if (game.current_challenge_id >= 5) {
           dispatch({ type: "DISPLAY_LEVEL_PAGE", game });
           return `/games/${game_username}`;
         }
-
-        return `/games/${game_username}/challenges/${game.current_challenge_id}`;
-      });
+          else
+          return `/games/${game_username}/challenges/${game.current_challenge_id}`
+      })
+    
   };
 };
