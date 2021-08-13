@@ -14,15 +14,15 @@ class Challenge extends Component {
 
   render() {
     return (
-      <section className="font-bold mx-15 text-center text-green-dark py-2 px-4">
+      <section className="font-bold mx-auto text-center text-green-dark py-2 px-4">
         <div className="container flex justify-center mx-auto bg-blue-200 p-8 md:p-0 items-center">
-          <figure className="box-center mx-auto">
+          <figure className="box-center mx-fullwidth">
             Pick the picture that matches the emotion:
 
           </figure>
         </div>
 
-        <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto">
+        <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-full-width">
           <div>
             <button onClick={this.handleClick}>
               <img
