@@ -3,26 +3,25 @@ import React, { Component } from "react";
 class Challenge extends Component {
   handleClick = (e) => {
     e.preventDefault();
-    this.props.dispatchCreateAnswer({
+    this.props.dispatchCreateAnswer(
+      {
         challenge_id: this.props.challenge.id,
-        face_id: e.target.id
+        face_id: e.target.id,
       },
       this.game_username
-     
-      );
+    );
   };
 
   render() {
     return (
-      <section className="font-bold mx-auto text-center text-green-dark py-2 px-4">
-        <div className="container flex justify-center mx-auto bg-blue-200 p-8 md:p-0 items-center">
-          <figure className="box-center mx-fullwidth">
+      <section className="font-bold mx-15 text-center text-green-dark py-2 px-4">
+        <div className="container flex justify-center mx-auto bg-blue-200 p-0 md:p-0 items-center">
+          <figure className="box-content mx-auto">
             Pick the picture that matches the emotion:
-
           </figure>
         </div>
 
-        <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-full-width">
+        <div className="grid-cols-3 col-span-3 grid-rows-1 flex justify-center mx-auto">
           <div>
             <button onClick={this.handleClick}>
               <img
