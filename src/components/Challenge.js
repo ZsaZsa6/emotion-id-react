@@ -57,6 +57,7 @@ class Challenge extends Component {
         </div>
         <figure className="bg-red-300 box font-bold text-2xl ">
           {this.props.challenge.emotion_name}
+          {this.props.challenge.emotion_pic}
         </figure>
       </section>
     );
