@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+Emotion ID
+This program was developed to enable individuals to practice identifying social cues. 
+At the lowest level(challenge) the user picks from two pictures and picks the correct picture that matches the listed emotion.
+The number of pictures increases with levels completed. 
+Challenge answers are stored in connection with the username.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
