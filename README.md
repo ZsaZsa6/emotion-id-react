@@ -4,6 +4,10 @@ At the lowest level(challenge) the user picks from two pictures and picks the co
 The number of pictures increases with levels completed. 
 Challenge answers are stored in connection with the username and game. 
 There is a search feature for usernames.
+To begin: begin the API server. See https://github.com/ZsaZsa6/emotion-id-api
+Type 'yarn start' in the terminal to start the application.
+A browser window will open. Choose a username or search for the correct username. 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
